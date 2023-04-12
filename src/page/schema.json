@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "page",
+  "title": "Page Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the page",
+      "type": "string",
+      "x-prompt": "Name:",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "path": {
+      "description": "Location of the page file",
+      "type": "string",
+      "format": "path",
+      "x-promt": "Location of the page?",
+      "default": "src/app"
+    }
+  },
+  "required": []
+}

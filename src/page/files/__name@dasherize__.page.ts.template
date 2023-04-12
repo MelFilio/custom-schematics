@@ -1,0 +1,16 @@
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: '<%= dasherize(name)%>',
+  templateUrl: './<%= dasherize(name)%>.page.html',
+  styleUrls: ['./<%= dasherize(name)%>.page.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class <%= classify(name)%>Page implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
