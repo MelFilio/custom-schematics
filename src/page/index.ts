@@ -1,5 +1,6 @@
 import { Rule, SchematicContext, Tree, apply, applyTemplates, chain, mergeWith, move, strings, url } from '@angular-devkit/schematics';
 import { normalize } from '@angular-devkit/core';
+
 interface PageOptions {
   name: string;
   path: string;

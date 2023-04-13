@@ -1,28 +1,65 @@
-# Getting Started With Schematics
+## Custom Angular Schematics
+This is a custom set of Angular schematics that provide additional functionality beyond what is included in the default Angular schematics.
 
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+---
 
-### Testing
+### Versions
+Supported angular Versions
+| Angular Version | @owey/custom-schematics |
+| --------------- | ------------ |
+| Angular 14      | 0.0.4        |
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
+### Installation
+To use these custom schematics, you must first install them as a package in your Angular project. To do so, run the following command in your project directory:
 
-Check the documentation with
+`npm install @owey/custom-schematics`
 
-```bash
-schematics --help
-```
+### Setup
+**Add**  `"@owey/custom-schematics"` to your `"schematicCollections"`
+ 
+`angular.json`
+```json
+  {
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "cli": {
+      "schematicCollections": [
+        "@schematics/angular",
+        "@owey/custom-schematics"
+      ]
+    },
+    ...
+  }
+  ```
 
-### Unit Testing
+### Usage
 
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
+> ##
+> ### Page
+>  Once you have installed the package containing your custom  schematics, you can use them by running the ng generate command  with the appropriate schematic name. For example, to generate a  new page using one of your custom schematics, you would run the  following command:> 
+>  `ng generate page page-name`> 
+>  `ng generate page path-name/page-name` 
+>  `ng generate page --name=page-name --path=path-name`
+>  | Arguments | Description |
+>  | -------- | -------- |
+>  | name | `--name=page-name` : name of the page |
+>  | path | `--path=path-name` : path of the page | 
+>  
+>  this will generate:
+>  
+>  > src/app/page-name/page-name-routing.module.ts
+>  > src/app/page-name/page-name.module.ts
+>  > src/app/page-name/page-name.page.html
+>  > src/app/page-name/page-name.page.scss
+>  > src/app/page-name/page-name.page.ts
+>  
+> The generated `component` default `changeDetection` will be `ChangeDetectionStrategyOnPush`
+> ##
 
-### Publishing
+### License
+This package is licensed under the MIT License. See the LICENSE file for details.
 
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
-```
-
-That's it!
+### Contributing
+If you would like to contribute to this package, please follow the guidelines in the CONTRIBUTING file.
+ 
+ 
