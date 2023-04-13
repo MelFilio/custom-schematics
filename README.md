@@ -4,15 +4,21 @@ This is a custom set of Angular schematics that provide additional functionality
 ---
 
 ### Versions
+
 Supported angular Versions
 | Angular Version | @owey/custom-schematics |
 | --------------- | ------------ |
 | Angular 14      | 0.0.4        |
 
+**Github** `lemon-mel/custom-schematics`
+https://github.com/lemon-mel/custom-schematics
+
 ### Installation
 To use these custom schematics, you must first install them as a package in your Angular project. To do so, run the following command in your project directory:
 
-`npm install @owey/custom-schematics`
+`npm install @owey/custom-schematics --save-dev`
+
+
 
 ### Setup
 **Add**  `"@owey/custom-schematics"` to your `"schematicCollections"`
