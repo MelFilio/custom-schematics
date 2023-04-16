@@ -8,7 +8,7 @@ This is a custom set of Angular schematics that provide additional functionality
 Supported angular Versions
 | Angular Version | @owey/custom-schematics |
 | --------------- | ------------ |
-| Angular 14      | 0.0.4        |
+| Angular 14      | 14.0.3        |
 
 **Github** `lemon-mel/custom-schematics`
 https://github.com/lemon-mel/custom-schematics
